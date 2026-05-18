@@ -1,4 +1,16 @@
+import csv
 students = []
+def simpan_data():
+    file = open("students.csv", "w", newline="")
+
+    writer = csv.writer(file)
+
+    writer.writerow(["Nama", "Rata-rata", "Status"])
+
+    for s in students:
+        writer.writerow(s)
+
+    file.close()
 
 while True:
     print("\n=== Student Academic Performance Tracker ===")
@@ -26,6 +38,7 @@ while True:
             status = "Tidak Lulus"
 
         students.append([nama, rata, status])
+        simpan_data()
 
     elif pilih == "2":
         print("\n=== DATA MAHASISWA ===")
@@ -72,6 +85,7 @@ while True:
         for s in students:
             if s[0].lower() == hapus.lower():
                 students.remove(s)
+                simpan_data()
                 print("Data berhasil dihapus")
                 ditemukan = True
                 break
