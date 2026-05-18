@@ -5,7 +5,8 @@ while True:
     print("1. Tambah Mahasiswa")
     print("2. Lihat Data")
     print("3. Ranking Mahasiswa")
-    print("4. Keluar")
+    print("4. Cari Mahasiswa")
+    print("5. Keluar")
 
     pilih = input("Pilih menu: ")
 
@@ -46,4 +47,21 @@ while True:
             nomor += 1
 
     elif pilih == "4":
+        cari = input("Masukkan nama mahasiswa: ")
+
+        ditemukan = False
+
+        for s in students:
+            if s[0].lower() == cari.lower():
+                print("\nData ditemukan")
+                print("Nama :", s[0])
+                print("Rata-rata :", s[1])
+                print("Status :", s[2])
+
+                ditemukan = True
+
+        if ditemukan == False:
+            print("Data tidak ditemukan")
+
+    elif pilih == "5":
         break
