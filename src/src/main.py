@@ -6,7 +6,8 @@ while True:
     print("2. Lihat Data")
     print("3. Ranking Mahasiswa")
     print("4. Cari Mahasiswa")
-    print("5. Keluar")
+    print("5. Hapus Mahasiswa")
+    print("6. Keluar")
 
     pilih = input("Pilih menu: ")
 
@@ -64,4 +65,19 @@ while True:
             print("Data tidak ditemukan")
 
     elif pilih == "5":
+        hapus = input("Masukkan nama mahasiswa yang ingin dihapus: ")
+
+        ditemukan = False
+
+        for s in students:
+            if s[0].lower() == hapus.lower():
+                students.remove(s)
+                print("Data berhasil dihapus")
+                ditemukan = True
+                break
+
+        if ditemukan == False:
+            print("Data tidak ditemukan")
+
+    elif pilih == "6":
         break
