@@ -4,7 +4,8 @@ while True:
     print("\n=== Student Academic Performance Tracker ===")
     print("1. Tambah Mahasiswa")
     print("2. Lihat Data")
-    print("3. Keluar")
+    print("3. Ranking Mahasiswa")
+    print("4. Keluar")
 
     pilih = input("Pilih menu: ")
 
@@ -34,4 +35,15 @@ while True:
             print()
 
     elif pilih == "3":
+        print("\n=== RANKING MAHASISWA ===")
+
+        ranking = sorted(students, key=lambda x: x[1], reverse=True)
+
+        nomor = 1
+
+        for s in ranking:
+            print(nomor, ".", s[0], "-", s[1])
+            nomor += 1
+
+    elif pilih == "4":
         break
