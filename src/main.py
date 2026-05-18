@@ -5,7 +5,6 @@ from src.graph import Graph
 from models.mahasiswa import Mahasiswa
 from models.nilai import Nilai
 
-
 # ======================================
 # INISIALISASI STRUKTUR DATA
 # ======================================
