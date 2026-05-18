@@ -1,9 +1,11 @@
-from src.bst import BSTMahasiswa
-from src.stack import Stack
-from src.graph import Graph
+from ahhhh.bst import BSTMahasiswa
+from ahhhh.stack import Stack
+from ahhhh.graph import Graph
 
 from models.mahasiswa import Mahasiswa
 from models.nilai import Nilai
+
+
 
 # ======================================
 # INISIALISASI STRUKTUR DATA
