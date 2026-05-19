@@ -1,0 +1,69 @@
+==================================================
+LOG PENGGUNAAN AI ASSISTANT
+Team Based Project ASD
+Topik 8 - Student Academic Performance Tracker
+==================================================
+
+[Prompt 1]
+Tanggal : 18 Mei 2026
+
+Prompt:
+"Buatkan struktur folder project Python untuk topic 8
+Student Academic Performance Tracker menggunakan
+BST, Stack, dan Graph."
+
+Tujuan:
+Membuat struktur awal project dan pembagian modul.
+
+--------------------------------------------------
+
+[Prompt 2]
+Tanggal : 18 Mei 2026
+
+Prompt:
+"Buatkan implementasi BST Python untuk menyimpan
+data mahasiswa berdasarkan NIM."
+
+Tujuan:
+Mengimplementasikan fitur insert, search,
+dan inorder traversal BST.
+
+--------------------------------------------------
+
+[Prompt 3]
+Tanggal : 19 Mei 2026
+
+Prompt:
+"Perbaiki error ModuleNotFoundError pada folder
+src dan models di Python."
+
+Tujuan:
+Memperbaiki sistem import project.
+
+--------------------------------------------------
+
+[Prompt 4]
+Tanggal : 19 Mei 2026
+
+Prompt:
+"Tambahkan fitur ranking IPK dan statistik grade
+pada project ASD."
+
+Tujuan:
+Menambah fitur tambahan pada aplikasi akademik.
+
+--------------------------------------------------
+
+[Prompt 5]
+Tanggal : 20 Mei 2026
+
+Prompt:
+"Buatkan analisis Big-O untuk BST, Stack, dan Graph
+pada project Student Academic Performance Tracker."
+
+Tujuan:
+Membantu penyusunan laporan dan dokumentasi.
+
+==================================================
+SELESAI
+==================================================
