@@ -1,1 +1,22 @@
+from src.bst import BSTMahasiswa
+from models.mahasiswa import Mahasiswa
 
+
+def test_insert_dan_search():
+
+    bst = BSTMahasiswa()
+
+    mahasiswa = Mahasiswa(
+        "23001",
+        "Fahmy"
+    )
+
+    bst.insert(mahasiswa)
+
+    hasil = bst.search("23001")
+
+    assert hasil is not None
+    assert hasil.nama == "Fahmy"
+
+
+print("Test BST berhasil")
