@@ -37,83 +37,11 @@ Digunakan untuk:
 
 ---
 
-## Struktur Folder Project
-
-```text
-tpb-asd-student-akademic-perfomance-tracker-kel03/
-│
-├── main.py
-│
-├── src/
-│   ├── __init__.py
-│   ├── bst.py
-│   ├── stack.py
-│   └── graph.py
-│
-├── models/
-│   ├── __init__.py
-│   ├── mahasiswa.py
-│   └── nilai.py
-│
-├── AI_Log/
-│   ├── Log_prompt.txt
-│   ├── screenshot1.png
-│   ├── screenshot2.png
-│   └── Link_GPT.txt
-│
-├── docs/
-│   ├── laporan.pdf
-│   └── slide_presentasi.pptx
-│
-├── tests/
-│   ├── test_bst.py
-│   ├── test_stack.py
-│   └── test_graph.py
-│
-├── .github/
-│   ├── workflows/
-│   │   └── ci.yml
-│   │
-│   └── pull_request_template.md
-│
-├── .gitignore
-├── README.md
-└── requirements.txt
-```
-
----
-
 ## Cara Menjalankan Program
 
 ### 1. Clone Repository
-
-```bash
-git clone https://github.com/Alfintio-byte/tpb-asd-student-akademic-perfomance-tracker-kel03.git
-```
-
 ### 2. Masuk ke Folder Project
-
-```bash
-cd tpb-asd-student-akademic-perfomance-tracker-kel03
-```
-
 ### 3. Jalankan Program
-
-```bash
-python main.py
-```
-
----
-
-## Analisis Big-O
-
-| Operasi | Struktur Data | Kompleksitas |
-|---|---|---|
-| Insert Mahasiswa | BST | O(log n) |
-| Search Mahasiswa | BST | O(log n) |
-| Push Undo | Stack | O(1) |
-| Pop Undo | Stack | O(1) |
-| Tambah Edge | Graph | O(1) |
 
 ---
 
@@ -125,12 +53,11 @@ python main.py
 
 ---
 
-## Anggota Kelompok
+## Anggota Team
 
-- Nama Anggota 1
-- Nama Anggota 2
-- Nama Anggota 3
-- Nama Anggota 4
+- Muhammad Alfintio Melandri (25051030078)
+- Fahmy Ferdiansyah (25051030073)
+- Putra Rizik (25051030049)
 
 ---
 
@@ -138,9 +65,3 @@ python main.py
 
 - Laporan project terdapat pada folder `docs/`
 - Log penggunaan AI terdapat pada folder `AI_Log/`
-
----
-
-## Kesimpulan
-
-Project ini berhasil mengintegrasikan beberapa struktur data seperti BST, Stack, dan Graph ke dalam sebuah aplikasi pengelolaan data akademik mahasiswa berbasis CLI. Sistem dapat digunakan untuk membantu proses penyimpanan, pencarian, dan pengolahan data mahasiswa secara lebih efisien dan terstruktur.
