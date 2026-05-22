@@ -1,2 +1,5 @@
 class UndoModule:
-    pass
+
+    def undo(self, stack):
+
+        return stack.pop()
