@@ -1,0 +1,2 @@
+class GraphModule:
+    pass

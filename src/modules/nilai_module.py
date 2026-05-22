@@ -1,0 +1,2 @@
+class NilaiModule:
+    pass
