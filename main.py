@@ -1,6 +1,9 @@
-from src.bst import BSTMahasiswa
-from src.stack import Stack
-from src.graph import Graph
+from src.data_structures.bst import BSTMahasiswa
+from src.data_structures.stack import Stack
+from src.data_structures.graph import Graph
+from src.data_structures.queue import Queue
+from src.data_structures.sorting import bubble_sort
+from src.data_structures.doubly_linked_list import DoublyLinkedList
 
 from models.mahasiswa import Mahasiswa
 from models.nilai import Nilai
@@ -13,6 +16,9 @@ bst = BSTMahasiswa()
 undo_stack = Stack()
 graph = Graph()
 
+queue = Queue()
+
+dll = DoublyLinkedList()
 
 # ======================================
 # DATA GRAPH PRASYARAT
@@ -33,7 +39,6 @@ graph.tambah_prasyarat("ELT101", "ELT201")
 graph.tambah_prasyarat("ELT201", "ELT301")
 graph.tambah_prasyarat("INF101", "INF201")
 
-
 # ======================================
 # FUNCTION FILTER IPK
 # ======================================
@@ -53,6 +58,19 @@ def filter_ipk(node, bawah, atas):
 
         filter_ipk(node.right, bawah, atas)
 
+# ======================================
+# FUNCTION AMBIL DATA
+# ======================================
+
+def ambil_data(node, data):
+
+    if node is not None:
+
+        ambil_data(node.left, data)
+
+        data.append(node.mahasiswa)
+
+        ambil_data(node.right, data)
 
 # ======================================
 # PROGRAM UTAMA
@@ -72,7 +90,9 @@ while True:
     print("6. Tampilkan Semua Mahasiswa")
     print("7. Tampilkan Graph Prasyarat")
     print("8. Filter IPK")
-    print("9. Keluar")
+    print("9. Ranking IPK")
+    print("10. Tampilkan Queue")
+    print("11. Keluar")
 
     pilih = input("Pilih menu : ")
 
@@ -96,6 +116,10 @@ while True:
             mahasiswa = Mahasiswa(nim, nama)
 
             bst.insert(mahasiswa)
+
+            queue.enqueue(nama)
+
+            dll.append(nama)
 
             print("Mahasiswa berhasil ditambahkan")
 
@@ -247,10 +271,44 @@ while True:
         filter_ipk(bst.root, bawah, atas)
 
     # ======================================
-    # 9. KELUAR
+    # 9. RANKING IPK
     # ======================================
 
     elif pilih == "9":
+
+        data_mahasiswa = []
+
+        ambil_data(bst.root, data_mahasiswa)
+
+        ranking = bubble_sort(data_mahasiswa)
+
+        print("\n===== RANKING IPK =====")
+
+        for mhs in ranking:
+
+            print(
+                mhs.nim,
+                "-",
+                mhs.nama,
+                "- IPK:",
+                round(mhs.ipk, 2)
+            )
+
+    # ======================================
+    # 10. TAMPILKAN QUEUE
+    # ======================================
+
+    elif pilih == "10":
+
+        print("\n===== QUEUE MAHASISWA =====")
+
+        queue.display()
+
+    # ======================================
+    # 11. KELUAR
+    # ======================================
+
+    elif pilih == "11":
 
         print("Program selesai")
 
