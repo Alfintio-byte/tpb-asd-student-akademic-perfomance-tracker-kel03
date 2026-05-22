@@ -1,3 +1,7 @@
+from src.data_structures.graph import Graph
+
 def test_graph():
 
-    assert True
+    graph = Graph()
+
+    assert graph is not None

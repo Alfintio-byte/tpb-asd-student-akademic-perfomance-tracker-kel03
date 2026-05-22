@@ -1,3 +1,7 @@
+from src.data_structures.stack import Stack
+
 def test_stack():
 
-    assert True
+    stack = Stack()
+
+    assert stack.is_empty() == True
